@@ -1,4 +1,4 @@
-package main.java.com.github.elevator.components.interfaces;
+package main.java.com.github.elevator.component.interfaces;
 
 public interface KeyAccess {
     public boolean isKeyTurned();

@@ -1,4 +1,4 @@
-package main.java.com.github.elevator.components.internal;
+package main.java.com.github.elevator.component.internal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ public class InternalPanel {
     public InternalPanel(int floorCount) {
         alarmButton = new AlarmButtonImpl();
         callButton = new CallButtonImpl();
-        closeDoorButton = new DoorButtonImpl(DoorState.CLOSED, false);
+        closeDoorButton = new DoorButtonImpl(DoorState.CLOSE, false);
         emergencyStopButton = new EmergencyStopButtonImpl();
         floorButtonList = new ArrayList<>(); {
             // Generate a floor button for each floor and add to the internal panel
@@ -27,7 +27,7 @@ public class InternalPanel {
             }
         }
         holdDoorButton = new DoorButtonImpl(DoorState.HOLD, false);
-        openDoorButton = new DoorButtonImpl(DoorState.OPENED, false);
+        openDoorButton = new DoorButtonImpl(DoorState.OPEN, false);
     }
 
     public AlarmButtonImpl getAlarmButton() {

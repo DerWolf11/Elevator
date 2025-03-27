@@ -1,6 +1,6 @@
-package main.java.com.github.elevator.components.internal;
+package main.java.com.github.elevator.component.internal;
 
-import main.java.com.github.elevator.components.interfaces.Button;
+import main.java.com.github.elevator.component.interfaces.Button;
 
 public class AlarmButtonImpl implements Button {
     private boolean isPressed;

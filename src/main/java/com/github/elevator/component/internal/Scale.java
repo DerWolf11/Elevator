@@ -1,4 +1,4 @@
-package main.java.com.github.elevator.components.internal;
+package main.java.com.github.elevator.component.internal;
 
 public class Scale {
     float weightKilograms;

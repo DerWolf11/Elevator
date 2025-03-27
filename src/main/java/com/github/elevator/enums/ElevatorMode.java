@@ -1,6 +1,6 @@
 package main.java.com.github.elevator.enums;
 
-public enum ElevatorModes {
+public enum ElevatorMode {
     // standard operating modes
     DEFAULT,
     FIRE_SERVICE,

@@ -1,6 +1,6 @@
-package main.java.com.github.elevator.components.internal;
+package main.java.com.github.elevator.component.internal;
 
-import main.java.com.github.elevator.components.interfaces.Button;
+import main.java.com.github.elevator.component.interfaces.Button;
 import main.java.com.github.elevator.enums.FloorNumber;
 
 public class FloorButtonImpl implements Button {

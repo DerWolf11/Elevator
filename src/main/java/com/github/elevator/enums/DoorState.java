@@ -1,7 +1,7 @@
 package main.java.com.github.elevator.enums;
 
 public enum DoorState {
-    OPENED,
+    OPEN,
     HOLD,
-    CLOSED
+    CLOSE
 }

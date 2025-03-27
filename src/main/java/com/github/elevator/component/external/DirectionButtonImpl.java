@@ -1,6 +1,6 @@
-package main.java.com.github.elevator.components.external;
+package main.java.com.github.elevator.component.external;
 
-import main.java.com.github.elevator.components.interfaces.Button;
+import main.java.com.github.elevator.component.interfaces.Button;
 import main.java.com.github.elevator.enums.ElevatorDirection;
 
 public class DirectionButtonImpl implements Button {

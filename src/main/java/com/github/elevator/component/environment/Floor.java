@@ -1,17 +1,18 @@
-package main.java.com.github.elevator.environment;
+package main.java.com.github.elevator.component.environment;
 
-import main.java.com.github.elevator.components.external.ExternalPanel;
+import main.java.com.github.elevator.component.external.ExternalPanel;
 import main.java.com.github.elevator.enums.DoorState;
+import main.java.com.github.elevator.enums.FloorNumber;
 
 public class Floor {
     private Doors doors;
     private ExternalPanel externalPanel;
-    private int floorNumber;
+    private FloorNumber floorNumber;
 
-    public Floor(int floorNumber) {
-        doors = new Doors(DoorState.CLOSED);
+    public Floor(FloorNumber floorNumber) {
+        doors = new Doors(DoorState.CLOSE);
         // Assume ground floor (1st floor) is the main egress and will therefore have a firefighter key access on the external panel
-        boolean groundFloor = floorNumber == 1;
+        boolean groundFloor = floorNumber == FloorNumber.FLOOR_1;
         externalPanel = new ExternalPanel(groundFloor);
         this.floorNumber = floorNumber;
     }
@@ -32,11 +33,11 @@ public class Floor {
         this.externalPanel = externalPanel;
     }
 
-    public int getFloorNumber() {
+    public FloorNumber getFloorNumber() {
         return floorNumber;
     }
 
-    public void setFloorNumber(int floorNumber) {
+    public void setFloorNumber(FloorNumber floorNumber) {
         this.floorNumber = floorNumber;
     }
 }

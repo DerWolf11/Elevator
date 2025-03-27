@@ -1,4 +1,4 @@
-package main.java.com.github.elevator.environment;
+package main.java.com.github.elevator.component.environment;
 
 import main.java.com.github.elevator.enums.DoorState;
 

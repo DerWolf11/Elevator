@@ -1,6 +1,6 @@
-package main.java.com.github.elevator.components.internal;
+package main.java.com.github.elevator.component.internal;
 
-import main.java.com.github.elevator.components.interfaces.KeyAccess;
+import main.java.com.github.elevator.component.interfaces.KeyAccess;
 
 public class FireInternalKeyAccessImpl implements KeyAccess{
     private boolean keyTurned;

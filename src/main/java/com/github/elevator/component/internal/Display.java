@@ -1,4 +1,4 @@
-package main.java.com.github.elevator.components.internal;
+package main.java.com.github.elevator.component.internal;
 
 import main.java.com.github.elevator.enums.ElevatorDirection;
 import main.java.com.github.elevator.enums.FloorNumber;

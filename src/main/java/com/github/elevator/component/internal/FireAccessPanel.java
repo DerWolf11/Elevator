@@ -1,4 +1,4 @@
-package main.java.com.github.elevator.components.internal;
+package main.java.com.github.elevator.component.internal;
 
 import main.java.com.github.elevator.enums.DoorState;
 
@@ -9,9 +9,9 @@ public class FireAccessPanel {
     private FireRunStopButtonImpl runStopButton;
 
     public FireAccessPanel() {
-        closeDoorButton = new FireDoorButtonImpl(DoorState.CLOSED, false);
+        closeDoorButton = new FireDoorButtonImpl(DoorState.CLOSE, false);
         fireKeyAccess = new FireInternalKeyAccessImpl();
-        openDoorButton = new FireDoorButtonImpl(DoorState.OPENED, false);
+        openDoorButton = new FireDoorButtonImpl(DoorState.OPEN, false);
         runStopButton = new FireRunStopButtonImpl();
     }
 
