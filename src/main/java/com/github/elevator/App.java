@@ -11,7 +11,7 @@ public class App {
 
     public static void main(String[] args) {
         try {
-            FileHandler fileHandler = new FileHandler("logs/app.log", true);
+            FileHandler fileHandler = new FileHandler("logs/elevator.log", true);
             fileHandler.setFormatter(new SimpleFormatter());
             fileHandler.setLevel(Level.INFO);
             logger.addHandler(fileHandler);
@@ -21,7 +21,7 @@ public class App {
             e.printStackTrace();
             return;
         }
-        // Your code starts here
+        
         logger.info("Hello, world!");
     }
 }
