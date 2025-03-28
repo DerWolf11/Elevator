@@ -4,16 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import main.java.com.github.elevator.enums.DoorState;
-import main.java.com.github.elevator.enums.FloorNumber;
 
 public class InternalPanel {
-    private AlarmButtonImpl alarmButton;
-    private CallButtonImpl callButton;
-    private DoorButtonImpl closeDoorButton;
-    private EmergencyStopButtonImpl emergencyStopButton;
-    private List<FloorButtonImpl> floorButtonList;
-    private DoorButtonImpl holdDoorButton;
-    private DoorButtonImpl openDoorButton;
+    private final AlarmButtonImpl alarmButton;
+    private final CallButtonImpl callButton;
+    private final DoorButtonImpl closeDoorButton;
+    private final EmergencyStopButtonImpl emergencyStopButton;
+    private final List<FloorButtonImpl> floorButtonList;
+    private final DoorButtonImpl holdDoorButton;
+    private final DoorButtonImpl openDoorButton;
 
     public InternalPanel(int floorCount) {
         alarmButton = new AlarmButtonImpl();
@@ -23,7 +22,7 @@ public class InternalPanel {
         floorButtonList = new ArrayList<>(); {
             // Generate a floor button for each floor and add to the internal panel
             for (int i = 1; i <= floorCount; i++) {
-                floorButtonList.add(new FloorButtonImpl(FloorNumber.values()[i], false));
+                floorButtonList.add(new FloorButtonImpl(i, false));
             }
         }
         holdDoorButton = new DoorButtonImpl(DoorState.HOLD, false);

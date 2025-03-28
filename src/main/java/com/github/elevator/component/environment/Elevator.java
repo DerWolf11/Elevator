@@ -8,25 +8,28 @@ import main.java.com.github.elevator.component.internal.KeycardReader;
 import main.java.com.github.elevator.component.internal.Scale;
 import main.java.com.github.elevator.enums.ElevatorDirection;
 import main.java.com.github.elevator.enums.ElevatorMode;
-import main.java.com.github.elevator.enums.FloorNumber;
 
 public class Elevator {
-    private AudioSystem audioSystem;
+    private final AudioSystem audioSystem;
     private ElevatorDirection currentDirection;
-    private FloorNumber currentFloor;
-    private Display display;
-    private FireAccessPanel fireAccessPanel;
-    private InternalPanel internalPanel;
-    private KeycardReader keycardReader;
+    private int currentFloor;
+    private int destinationFloor;
+    private final Display display;
+    private final FireAccessPanel fireAccessPanel;
+    private final int id;
+    private final InternalPanel internalPanel;
+    private final KeycardReader keycardReader;
     private ElevatorMode operationalMode;
-    private Scale scale;
+    private final Scale scale;
 
-    public Elevator(int floorCount) {
+    public Elevator(int floorCount, int id) {
         audioSystem = new AudioSystem();
         currentDirection = ElevatorDirection.STOPPED;
-        currentFloor = FloorNumber.FLOOR_1;
+        currentFloor = 1;
+        destinationFloor = 1;
         display = new Display();
         fireAccessPanel = new FireAccessPanel();
+        this.id = id;
         internalPanel = new InternalPanel(floorCount);
         keycardReader = new KeycardReader();
         operationalMode = ElevatorMode.DEFAULT;
@@ -37,7 +40,7 @@ public class Elevator {
         return audioSystem;
     }
     
-    public FloorNumber getCurrentFloor() {
+    public int getCurrentFloor() {
         return currentFloor;
     }
 
@@ -49,8 +52,16 @@ public class Elevator {
         this.currentDirection = currentDirection;
     }
 
-    public void setCurrentFloor(FloorNumber currentFloor) {
+    public void setCurrentFloor(int currentFloor) {
         this.currentFloor = currentFloor;
+    }
+
+    public int getDestinationFloor() {
+        return destinationFloor;
+    }
+
+    public void setDestinationFloor(int destinationFloor) {
+        this.destinationFloor = destinationFloor;
     }
 
     public Display getDisplay() {
@@ -61,6 +72,10 @@ public class Elevator {
         return fireAccessPanel;
     }
     
+    public int getId() {
+        return id;
+    }
+
     public InternalPanel getInternalPanel() {
         return internalPanel;
     }

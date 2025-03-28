@@ -1,11 +1,10 @@
 package main.java.com.github.elevator.component.internal;
 
 import main.java.com.github.elevator.enums.ElevatorDirection;
-import main.java.com.github.elevator.enums.FloorNumber;
 
 public class Display {
     private ElevatorDirection direction;
-    private FloorNumber currentFloor;
+    private int currentFloor;
 
     public ElevatorDirection getDirection() {
         return direction;
@@ -15,11 +14,11 @@ public class Display {
         this.direction = direction;
     }
 
-    public FloorNumber getCurrentFloor() {
+    public int getCurrentFloor() {
         return currentFloor;
     }
 
-    public void setCurrentFloor(FloorNumber floorNumber) {
+    public void setCurrentFloor(int floorNumber) {
         this.currentFloor = floorNumber;
     }
 }

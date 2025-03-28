@@ -1,22 +1,21 @@
 package main.java.com.github.elevator.component.internal;
 
 import main.java.com.github.elevator.component.interfaces.Button;
-import main.java.com.github.elevator.enums.FloorNumber;
 
 public class FloorButtonImpl implements Button {
-    private FloorNumber floorNumber;
+    private int floorNumber;
     private boolean pressed;
     
-    public FloorButtonImpl(FloorNumber floorNumber, boolean pressed) {
+    public FloorButtonImpl(int floorNumber, boolean pressed) {
         this.floorNumber = floorNumber;
         this.pressed = pressed;
     }
 
-    public FloorNumber getFloorNumber() {
+    public int getFloorNumber() {
         return floorNumber;
     }
 
-    public void setFloorNumber(FloorNumber floorNumber) {
+    public void setFloorNumber(int floorNumber) {
         this.floorNumber = floorNumber;
     }
 
