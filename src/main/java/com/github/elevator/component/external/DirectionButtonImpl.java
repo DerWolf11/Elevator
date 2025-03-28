@@ -4,7 +4,7 @@ import main.java.com.github.elevator.component.interfaces.Button;
 import main.java.com.github.elevator.enums.ElevatorDirection;
 
 public class DirectionButtonImpl implements Button {
-    private ElevatorDirection direction;
+    private final ElevatorDirection direction;
     private boolean pressed;
     
     public DirectionButtonImpl(ElevatorDirection direction, boolean pressed) {
@@ -14,10 +14,6 @@ public class DirectionButtonImpl implements Button {
 
     public ElevatorDirection getDirection() {
         return direction;
-    }
-
-    public void setDirection(ElevatorDirection direction) {
-        this.direction = direction;
     }
 
     @Override

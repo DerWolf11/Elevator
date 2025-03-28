@@ -5,7 +5,7 @@ import main.java.com.github.elevator.enums.DoorState;
 
 public class DoorButtonImpl implements Button {
     private boolean pressed;
-    private DoorState doorState;
+    private final DoorState doorState;
     
     public DoorButtonImpl(DoorState doorState, boolean pressed) {
         this.doorState = doorState;
@@ -14,10 +14,6 @@ public class DoorButtonImpl implements Button {
 
     public DoorState getDoorState() {
         return doorState;
-    }
-
-    public void setDoorState(DoorState doorState) {
-        this.doorState = doorState;
     }
 
     @Override

@@ -1,2 +1,2 @@
 # Elevator
-Simulated Elevator project
+Project to simulate a basic elevator system.
