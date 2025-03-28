@@ -28,4 +28,18 @@ public class AuthenticationManager {
         AuditManager.getInstance().auditEvent(eventMsg);
         return true;
     }
+
+    public void addAuthorization(String auth) {
+        /*
+         * This call would take in a series of auth details for new keycards/users and update the 'auth' database table
+         * Columns would include details like: user id, elevator number, access issue/revoke dates, floor and operational mode access, and active status
+         */
+        return;
+    }
+
+    public void revokeAuthorization(String auth) {
+        // This call would revoke auth access for a specified user.
+        // It could also be enhanced to just deactivate access, rather than removing entirely
+        return;
+    }
 }

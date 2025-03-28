@@ -20,16 +20,19 @@ public class App {
             Elevator elevator = elevatorManager.callElevator(ElevatorDirection.UP, 1);
             elevator.pressFloorButton(6);
             elevatorManager.travel(elevator);
+            logger.info("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
             // Down from 2 to 1
             elevator = elevatorManager.callElevator(ElevatorDirection.DOWN, 2);
             elevator.pressFloorButton(1);
             elevatorManager.travel(elevator);
+            logger.info("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
             // Down from 8 to 1
             elevator = elevatorManager.callElevator(ElevatorDirection.DOWN, 8);
             elevator.pressFloorButton(1);
             elevatorManager.travel(elevator);
+            logger.info("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
             elevator = elevatorManager.callElevator(ElevatorDirection.UP, 111);
             elevator.pressFloorButton(10);
