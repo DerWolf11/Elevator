@@ -36,6 +36,12 @@ In order to more quickly find a matching elevator, the floors are divided into b
     - Bucket 1: floors 5-10
     - Bucket 2: floors 10-12
 
+In the provided test cases, the logs will show the following trips on a building with 14 floors and 4 elevators in service:
+    - Elevator 4 takes a passenger UP from floor 1 to 6
+    - Elevator 3 takes a passenger DOWN from floor 2 to 1
+    - Elevator 4 is closest to a call on floor 8, taking a passenger from 8 down to 1
+    - Invalid floor input on a call request
+
 ## State of the Simulator
 
 ### Max Values
@@ -71,3 +77,7 @@ Music
 - **Scale** - Elevators have a maximum operational weight capacity. This would trip a failure state and not allow the elevator to proceed while overloaded.
 
 While all of the above components are included in the Elevator and its internal components, only the floor press button is actually implemented in the elevator tests.
+
+State changes of components are all contained in just a few action methods for this simulator, but in a full-scale implementation it would be better to have cleaner separation of the actions, since there would be things like emergency buttons, open/close/hold doors, or multiple floor stops interspersed.
+
+A real elevator would also have travel and load times where these buttons could be pressed, unlike this simulator.
