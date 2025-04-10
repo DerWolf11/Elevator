@@ -32,8 +32,8 @@ This simulator will use a simple method of dispatching the closest elevator, reg
 In order to more quickly find a matching elevator, the floors are divided into buckets of 5 floors. The dispatcher will check for an available elevator in the bucket of incoming service calls, and work its way out from there. So if a request comes in for pickup on the 3rd floor, the dispatcher would check bucket 0 first, then move on to bucket 1 and finally 2.
 
 - For example, a building with 12 floors would be divided into 3 buckets:
-    - Bucket 0: floors 1-5
-    - Bucket 1: floors 5-10
+    - Bucket 0: floors 0-4
+    - Bucket 1: floors 5-9
     - Bucket 2: floors 10-12
 
 In the provided test cases, the logs will show the following trips on a building with 14 floors and 4 elevators in service:
